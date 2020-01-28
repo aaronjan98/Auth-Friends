@@ -6,7 +6,8 @@ class Login extends React.Component {
     credentials: {
       username: '',
       password: ''
-    }
+    },
+    isLoading: false
   };
 
   handleChange = e => {
