@@ -63,7 +63,7 @@ class FriendsList extends Component {
                 </div>
             );
             })}
-            <AddFriends friendsList={this.state.friendsList}/>
+            <AddFriends friendsList={this.state.friendsList} getData={this.getData}/>
       </>
     );
   }

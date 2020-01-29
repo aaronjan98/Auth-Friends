@@ -28,14 +28,10 @@ class AddFriends extends React.Component {
           .then(res => {
               console.log('Res after posting to api/friends', res.data);
               console.log('props data', this.props.friendsList);
-
+            this.props.getData();
             })
             .catch(err => console.log(err));
         };
-        
-        componentWillReceiveProps(props) {
-          console.log('componentWillReceiveProps', props.friendsList);
-    }
       
     render() {
         return (
