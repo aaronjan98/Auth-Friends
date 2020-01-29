@@ -6,8 +6,7 @@ class Login extends React.Component {
     credentials: {
       username: '',
       password: ''
-    },
-    isLoading: false
+    }
   };
 
   handleChange = e => {
@@ -24,6 +23,7 @@ class Login extends React.Component {
     // make a POST request to the server
     // the server will "authenticate" the user based on their credentials
     // If they can be authenticated the server will return a token
+
     axios
       .post('http://localhost:5000/api/login', this.state.credentials)
       .then(res => {
