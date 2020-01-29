@@ -40,7 +40,7 @@ class FriendsList extends Component {
 
   formatData = () => {
     const formattedData = [];
-    console.log(this.state.friendsList);
+    console.log('friendsList', this.state.friendsList);
     return formattedData;
   };
 
@@ -63,7 +63,7 @@ class FriendsList extends Component {
                 </div>
             );
             })}
-            <AddFriends />
+            <AddFriends friendsList={this.state.friendsList}/>
       </>
     );
   }

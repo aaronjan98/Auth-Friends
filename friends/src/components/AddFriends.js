@@ -20,18 +20,22 @@ class AddFriends extends React.Component {
           }
         });
       };
-    
+      
       addFriend = e => {
-        e.preventDefault();
-        axiosWithAuth()
+          e.preventDefault();
+          axiosWithAuth()
           .post('http://localhost:5000/api/friends', this.state.friend)
           .then(res => {
-            console.log('Res after posting to api/friends', res.data);
-            // localStorage.setItem('token', res.data);
-            // this.props.history.push('/addfriends');
-          })
-          .catch(err => console.log(err));
-      };
+              console.log('Res after posting to api/friends', res.data);
+              console.log('props data', this.props.friendsList);
+
+            })
+            .catch(err => console.log(err));
+        };
+        
+        componentWillReceiveProps(props) {
+          console.log('componentWillReceiveProps', props.friendsList);
+    }
       
     render() {
         return (
